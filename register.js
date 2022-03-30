@@ -64,10 +64,10 @@ function check() {
 
     if (confirm_password == "") {
         $('#confirm_password').addClass('err_border');
-        document.getElementById('confirm_password_err').innerHTML = "Name can't be left blank"
+        document.getElementById('confirm_password_err').innerHTML = "Confirm Password can't be left blank"
     } else if (password !== confirm_password) {
         $('#confirm_password').addClass('err_border');
-        document.getElementById('confirm_password_err').innerHTML = "Name not be invalid"
+        document.getElementById('confirm_password_err').innerHTML = "Confirm Password not be invalid"
     } else {
         $('#confirm_password').removeClass('err_border');
         document.getElementById('confirm_password_err').innerHTML = ""
