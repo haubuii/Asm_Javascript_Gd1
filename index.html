@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="// db.onlinewebfonts.com/c/08d38d30f8748388c11592e40dd0ad68?family=ABChanel+Corpo+Light" rel="stylesheet" type="text / css" />
+
+
+    <link rel="icon" href="android-chrome-512x512.png">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title>
+
+
+</head>
+
+<body>
+    <div class="form-container">
+        <form>
+            <div class="form-head">
+                <h1 class="form-head-title">ACCOUNT</h1>
+                <div class="sgrg">
+                    <div class="sign-in" id="sign-in">
+                        <h6 onclick="signin();">SIGN IN</h6>
+                    </div>
+                    <div class="register border-register" id="register">
+                        <h6 onclick="register();">REGISTER</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="form-sign-in" id="form-sign-in">
+                <div class="form-content">
+                    <h6>WELCOM BACK.</h6>
+                    <p>Sign in with your email and password.</p>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <div class="forgot-password">Forgot password? <i class="fa-solid fa-angle-right"></i></div>
+                </div>
+
+                <div class="dieukhoan">
+                    <input type="checkbox">
+                    <p>Remember me (optional)</p>
+                </div>
+
+                <div class="btn-form">
+                    <button class="btn-register">
+                        <h6>SIGN IN</h6>
+                    </button>
+                </div>
+            </div>
+            <div class="form-register" id="form-register">
+                <div class="form-content">
+                    <p>Create an account to enjoy a personalised shopping experience and faster online checkout.</p>
+                    <input type="text" placeholder="Username" id="username">
+                    <div class="err" id="username_err"></div>
+
+                    <input type="email" placeholder="Email" id="email">
+                    <div class="err" id="email_err"></div>
+
+                    <input type="text" placeholder="Full name" id="name">
+                    <div class="err" id="name_err"></div>
+
+                    <label for="choose">Sex</label>
+                    <select class="choose sex_label sex_select" placeholder="Title ">
+                        <option value="" name="sex_select">...</option>
+                        <option value="Mr" name="sex_select">Male</option>
+                        <option value="Mrs" name="sex_select">Female</option>
+                        <option value="Others" name="sex_select">Others</option>                       
+                    </select>
+                    <div class="err" id="sex_err"></div>
+
+                    <label for="">Nationality</label>
+                    <div class="choose">
+                        <select class="choose select_nationality">
+                            <option value="">...</option>
+                            <option value="VIETNAM">VIETNAM</option>
+                            <option value="UNITED">UNITED KINDOM</option>
+                        </select>
+                    </div>
+                    <div class="err" id="nationality_err"></div>
+
+                    <div class="birthday">
+                        <label for=" ">Date of birth (optional)<i class="fa-solid fa-circle-question "></i></label>
+
+                        <div>
+                            <select class="choose select_month" placeholder="Month">
+                                <option value="">Month</option>
+                                <option value="month ">1</option>
+                                <option value="month ">2</option>
+                                <option value="month ">3</option>
+                                <option value="month ">4</option>
+                                <option value="month ">5</option>
+                                <option value="month ">6</option>
+                                <option value="month ">7</option>
+                                <option value="month ">8</option>
+                                <option value="month ">9</option>
+                                <option value="month ">10</option>
+                                <option value="month ">11</option>
+                                <option value="month ">12</option>                                                        
+                                <br>
+                            </select>
+
+                            <select class="choose select_day" name="select_day" placeholder="Day">
+                                <option value="">Day</option>
+                                <option value="day ">1</option>
+                                <option value="day ">2</option>
+                                <option value="day ">3</option>
+                                <option value="day ">4</option>
+                                <option value="day ">5</option>
+                                <option value="day ">6</option>
+                                <option value="day ">7</option>
+                                <option value="day ">8</option>
+                                <option value="day ">9</option>
+                                <option value="day ">10</option>
+                                <option value="day ">11</option>
+                                <option value="day ">12</option>
+                                <option value="day ">13</option>
+                                <option value="day ">14</option>
+                                <option value="day ">15</option>
+                                <option value="day ">16</option>
+                                <option value="day ">17</option>
+                                <option value="day ">18</option>
+                                <option value="day ">19</option>
+                                <option value="day ">20</option>
+                                <option value="day ">21</option>
+                                <option value="day ">22</option>
+                                <option value="day ">23</option>
+                                <option value="day ">24</option>
+                                <option value="day ">25</option>
+                                <option value="day ">26</option>
+                                <option value="day ">27</option>
+                                <option value="day ">28</option>
+                                <option value="day ">29</option>
+                                <option value="day ">30</option>
+                                <option value="day ">31</option>                                
+                            </select>
+                        </div>
+                        <div class="day_err">
+                            <div class="err" id="month_birthday_err"></div>
+                            <div class="err bday_err" id="day_birthday_err"></div>
+                        </div>
+                    </div>
+
+
+                    <input type="password" placeholder="Password" id="password">
+                    <div class="err" id="password_err"></div>
+
+                    <input type="password" placeholder="Confirm Password" id="confirm_password">
+                    <div class="err" id="confirm_password_err"></div>
+
+                </div>
+
+                <div class="btn-form ">
+                    <button class="btn-register " onclick="check(); " type="button">
+                        <h6>CREATE ACCOUNT</h6>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="register.js "></script>
+
+</html>
