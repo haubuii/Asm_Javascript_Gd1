@@ -143,8 +143,7 @@ function check_signin() {
     }
 
 
-    var password = document.getElementById('password').value;
-
+    var password = document.getElementById('password_signin').value;
 
     if (password == "") {
         $('#password_signin').addClass('err_border');
@@ -154,8 +153,33 @@ function check_signin() {
         document.getElementById('password_signin_err').innerHTML = ""
 
     }
+    console.log(check_signin)
 
 }
+
+$("#username_signin").blur(function () {
+    var user_name = document.getElementById('username_signin').value;
+    if (user_name == "") {
+        $('#username_signin').addClass('err_border');
+        document.getElementById('username_signin_err').innerHTML = "Username can't be left blank"
+    } else {
+        $('#username_signin').removeClass('err_border');
+        document.getElementById('username_signin_err').innerHTML = ""
+
+    }
+});
+$("#password_signin").blur(function () {
+    var password = document.getElementById('password_signin').value;
+    if (password == "") {
+        $('#password_signin').addClass('err_border');
+        document.getElementById('password_signin_err').innerHTML = "Password can't be left blank"
+    } else {
+        $('#password_signin').removeClass('err_border');
+        document.getElementById('password_signin_err').innerHTML = ""
+
+    }
+    console.log(check_signin)
+});
 
 $("#username").blur(function () {
     var user_name = document.getElementById('username').value;
@@ -208,6 +232,8 @@ $("#confirm_password").blur(function () {
 
     }
 });
+
+
 
 function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
