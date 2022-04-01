@@ -37,8 +37,10 @@
                 <div class="form-content">
                     <h6>WELCOM BACK.</h6>
                     <p>Sign in with your email and password.</p>
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
+                    <input type="text" placeholder="Username" id="username_signin">
+                    <div class="err" id="username_signin_err"></div>
+                    <input type="password" placeholder="Password" id="password_signin">
+                    <div class="err" id="password_signin_err"></div>
                     <div class="forgot-password">Forgot password? <i class="fa-solid fa-angle-right"></i></div>
                 </div>
 
@@ -48,7 +50,7 @@
                 </div>
 
                 <div class="btn-form">
-                    <button class="btn-register">
+                    <button class="btn-register" onclick="check_signin();" type="button">
                         <h6>SIGN IN</h6>
                     </button>
                 </div>
@@ -66,7 +68,7 @@
                     <div class="err" id="name_err"></div>
 
                     <label for="choose">Sex</label>
-                    <select class="choose sex_label sex_select" placeholder="Title ">
+                    <select class="choose sex_label sex_select" placeholder="Title">
                         <option value="" name="sex_select">...</option>
                         <option value="Mr" name="sex_select">Male</option>
                         <option value="Mrs" name="sex_select">Female</option>
@@ -156,7 +158,7 @@
                 </div>
 
                 <div class="btn-form ">
-                    <button class="btn-register " onclick="check(); " type="button">
+                    <button class="btn-register " onclick="check_register(); " type="button">
                         <h6>CREATE ACCOUNT</h6>
                     </button>
                 </div>

@@ -16,7 +16,7 @@ function signin() {
     $('.sign-in').addClass('border-sign-in');
 }
 
-function check() {
+function check_register() {
 
     var user_name = document.getElementById('username').value;
     if (user_name == "") {
@@ -74,64 +74,90 @@ function check() {
 
     }
 
+    // ---------------------------------------- Select Box --------------------------------------------
+    var sex = $('.sex_select')
+    console.log(sex.val())
+
+    if (sex.val() === "" || sex.val() === null) {
+        if (check_register) {
+            $('.sex_select').addClass('err_border');
+            document.getElementById('sex_err').innerHTML = "Please choose your Gender"
+        }
+        
+    } else {
+        $('.sex_select').removeClass('err_border');
+        document.getElementById('sex_err').innerHTML = ""
+    }
+    var nationality = $('.select_nationality')
+    console.log(nationality.val())
+
+    if (nationality.val() === "" || nationality.val() === null) {
+        if (check_register) {
+            $('.select_nationality').addClass('err_border');
+            document.getElementById('nationality_err').innerHTML = "Please choose your Nationality";
+        }
+        
+    } else {
+        $('.select_nationality').removeClass('err_border');
+        document.getElementById('nationality_err').innerHTML = ""
+    }
+    var birthday = $('.select_month')
+    console.log(birthday.val())
+
+    if (birthday.val() === "" || birthday.val() === null) {
+        if (check_register) {
+            $('.select_month').addClass('err_border');
+            document.getElementById('month_birthday_err').innerHTML = "Please choose Month"
+        }
+        
+    } else {
+        $('.select_month').removeClass('err_border');
+        document.getElementById('month_birthday_err').innerHTML = ""
+    }
     var birthday = $('.select_day')
     console.log(birthday.val())
 
     if (birthday.val() === "" || birthday.val() === null) {
-        if (check) {
+        if (check_register) {
             $('.select_day').addClass('err_border');
             document.getElementById('day_birthday_err').innerHTML = "Please choose Day"
         }
-        check = true;
+        
     } else {
         $('.select_day').removeClass('err_border');
         document.getElementById('day_birthday_err').innerHTML = ""
     }
 
-    var birthday = $('.select_month')
-    console.log(birthday.val())
+}
 
-    if (birthday.val() === "" || birthday.val() === null) {
-        if (check) {
-            $('.select_month').addClass('err_border');
-            document.getElementById('month_birthday_err').innerHTML = "Please choose Month"
-        }
-        check = true;
+function check_signin() {
+
+    var user_name = document.getElementById('username_signin').value;
+    if (user_name == "") {
+        $('#username_signin').addClass('err_border');
+        document.getElementById('username_signin_err').innerHTML = "Username can't be left blank"
     } else {
-        $('.select_month').removeClass('err_border');
-        document.getElementById('month_birthday_err').innerHTML = ""
+        $('#username_signin').removeClass('err_border');
+        document.getElementById('username_signin_err').innerHTML = ""
+
     }
 
-    var nationality = $('.select_nationality')
-    console.log(nationality.val())
 
-    if (nationality.val() === "" || nationality.val() === null) {
-        if (check) {
-            $('.select_nationality').addClass('err_border');
-            document.getElementById('nationality_err').innerHTML = "Please choose your Nationality";
-        }
-        check = true;
+    var password = document.getElementById('password').value;
+
+
+    if (password == "") {
+        $('#password_signin').addClass('err_border');
+        document.getElementById('password_signin_err').innerHTML = "Password can't be left blank"
     } else {
-        $('.select_nationality').removeClass('err_border');
-        document.getElementById('nationality_err').innerHTML = ""
-    }
+        $('#password_signin').removeClass('err_border');
+        document.getElementById('password_signin_err').innerHTML = ""
 
-    var birthday = $('.sex_select')
-    console.log(birthday.val())
-
-    if (birthday.val() === "" || birthday.val() === null) {
-        if (check) {
-            $('.sex_select').addClass('err_border');
-            document.getElementById('sex_err').innerHTML = "Please choose your Gender"
-        }
-        check = true;
-    } else {
-        $('.sex_select').removeClass('err_border');
-        document.getElementById('sex_err').innerHTML = ""
     }
 
 }
-$("#username").blur(function() {
+
+$("#username").blur(function () {
     var user_name = document.getElementById('username').value;
     if (user_name == "") {
         $('#username').addClass('err_border');
@@ -142,7 +168,7 @@ $("#username").blur(function() {
 
     }
 });
-$("#name").blur(function() {
+$("#name").blur(function () {
 
     var name = document.getElementById('name').value;
     if (name == "") {
@@ -154,7 +180,7 @@ $("#name").blur(function() {
 
     }
 });
-$("#password").blur(function() {
+$("#password").blur(function () {
     var password = document.getElementById('password').value;
     if (password == "") {
         $('#password').addClass('err_border');
@@ -166,7 +192,7 @@ $("#password").blur(function() {
     }
 });
 
-$("#confirm_password").blur(function() {
+$("#confirm_password").blur(function () {
     var password = document.getElementById('password').value;
     var confirm_password = document.getElementById('confirm_password').value;
 
@@ -187,7 +213,7 @@ function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
-$("#email").blur(function() {
+$("#email").blur(function () {
     var email = document.getElementById('email').value;
 
     if (!isEmail(email)) {
@@ -200,14 +226,17 @@ $("#email").blur(function() {
 
 });
 
-$(document).ready(function() {
+// ---------------------------------------- Select Box --------------------------------------------
+
+
+$(document).ready(function () {
     var check = false;
-    $(".sex_select").click(function() {
+    $(".sex_select").click(function () {
 
-        var birthday = $('.sex_select')
-        console.log(birthday.val())
+        var sex = $('.sex_select')
+        console.log(sex.val())
 
-        if (birthday.val() === "" || birthday.val() === null) {
+        if (sex.val() === "" || sex.val() === null) {
             if (check) {
                 $('.sex_select').addClass('err_border');
                 document.getElementById('sex_err').innerHTML = "Please choose your Gender"
@@ -221,9 +250,9 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     var check = false;
-    $(".select_nationality").click(function() {
+    $(".select_nationality").click(function () {
 
         var nationality = $('.select_nationality')
         console.log(nationality.val())
@@ -241,9 +270,9 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     var check = false;
-    $(".select_month").click(function() {
+    $(".select_month").click(function () {
 
         var birthday = $('.select_month')
         console.log(birthday.val())
@@ -261,9 +290,9 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     var check = false;
-    $(".select_day").click(function() {
+    $(".select_day").click(function () {
 
         var birthday = $('.select_day')
         console.log(birthday.val())

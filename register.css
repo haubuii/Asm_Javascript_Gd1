@@ -219,6 +219,7 @@ form {
     border-bottom: 1px solid white;
     color: black;
     width: 23%;
+    margin-top: 20px;
 }
 
 .form-sign-in .forgot-password:hover {
@@ -574,5 +575,6 @@ label {
         border-bottom: 1px solid white;
         color: black;
         width: 40%;
+        
     }
 }
