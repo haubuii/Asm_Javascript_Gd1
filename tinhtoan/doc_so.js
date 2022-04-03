@@ -1,5 +1,6 @@
 // <!-------------------------- Đọc số ------------------------------ -->
 
+
 document.getElementById("btn_doc_so").addEventListener("click", btn_doc_so);
 function btn_doc_so() {
 
