@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Tính toán</title>
+</head>
+<style>
+    body {
+        list-style: none;
+        box-sizing: border-box;
+        padding-bottom: 100px;
+    }
+
+    form {
+        margin: auto;
+        width: 300px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid #ddd;
+        top: 100px;
+        position: relative;
+        margin-bottom: 100px;
+
+    }
+    
+
+    form h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 3px 0;
+        border: none;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    }
+
+    .btn {
+        margin: 20px 0;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+
+    }
+
+    .ket_qua {
+        /* border: 1px solid #ddd; */
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .ket_qua_item {
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .ket_qua_item span {
+        display: block;
+
+        width: 100%;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <form action="">
+        <H1>Xếp loại học lực</H1>
+
+        <input type="text" name="diem_toan" id="diem_toan" placeholder="Nhập điểm toán">
+        <input type="text" name="diem_van" id="diem_van" placeholder="Nhập điểm văn">
+        <input type="text" name="diem_anh" id="diem_anh" placeholder="Nhập điểm anh">
+
+
+
+        <button id="btn_xep_loai" class="btn" type="button">BUTTON</button>
+        <div class="ket_qua">
+            <div class="ket_qua_item">
+                <div>Kết quả: </div>
+                <span id="dtb"></span>
+                <span id="ket_qua_xep_loai"></span>
+            </div>
+
+
+        </div>
+    </form>
+
+    <!------------------------Chia 3 và 5-------------------------- -->
+    <form action="">
+        <H1>Chia hết cho 3 và 5</H1>
+
+        <input type="text" name="so_n" id="so_n" placeholder="Nhập n">
+
+        <button id="btn_chia3_5" class="btn" type="button">BUTTON</button>
+        <div class="ket_qua">
+            <div class="ket_qua_item">
+                <div>Kết quả: </div>
+                <span id="ket_qua_chia3_5"></span>
+
+            </div>
+
+
+        </div>
+    </form>
+
+
+    <!--------------- Tìm Số nguyên dương n ---------------- -->
+    <form action="">
+        <H1>Tìm n</H1>
+        <div> Tìm số nguyên dương n nhỏ nhất sao cho 1 + 2 + … + n > x</div>
+
+        <input type="text" name="so_n" id="so_x" placeholder="Nhập x">
+
+        <button id="btn_tim_n" class="btn" type="button">BUTTON</button>
+        <div class="ket_qua">
+            <div class="ket_qua_item">
+                <div>Kết quả: </div>
+                <span id="ket_qua_tim_n"></span>
+
+            </div>
+
+
+        </div>
+    </form>
+
+
+    <!--------------- Tìm Số Ước Chung Lớn Nhất ---------------- -->
+    <form action="">
+        <H1>Tìm Số Ước Chung Lớn Nhất</H1>
+
+
+        <input type="text" name="so_1" id="so_1" placeholder="Nhập số thứ 1">
+        <input type="text" name="so_2" id="so_2" placeholder="Nhập số thứ 2">
+
+        <button id="btn_ucln" class="btn" type="button">BUTTON</button>
+        <div class="ket_qua">
+            <div class="ket_qua_item">
+                <div>Kết quả: </div>
+                <span id="ket_qua_ucln"></span>
+
+            </div>
+
+
+        </div>
+    </form>
+
+
+    <!--------------- Tìm Tam Giác ---------------- -->
+    <form action="">
+        <H1>Tìm Tam Giác</H1>
+
+
+        <input type="text" name="canh_1" id="canh_1" placeholder="Nhập cạnh thứ 1">
+        <input type="text" name="canh_2" id="canh_2" placeholder="Nhập cạnh thứ 2">
+        <input type="text" name="canh_3" id="canh_3" placeholder="Nhập cạnh thứ 3">
+
+
+        <button id="btn_tam_giac" class="btn" type="button">BUTTON</button>
+        <div class="ket_qua">
+            <div class="ket_qua_item">
+                <div>Kết quả: </div>
+                <span id="ket_qua_tam_giac"></span>
+
+            </div>
+
+
+        </div>
+    </form>
+
+    <!-------------------------- Đọc số ------------------------------ -->
+
+
+    <form action="" class="form_doc_so">
+        <H1>Cách đọc số</H1>
+
+
+        <input type="text" name="so_can_doc" id="so_can_doc" placeholder="Nhập số cần đọc">
+        
+
+
+        <button id="btn_doc_so" class="btn" type="button">BUTTON</button>
+        <div class="ket_qua">
+            <div class="ket_qua_item">
+                <div>Kết quả: </div>
+                <span id="ket_qua_doc_so"></span>
+
+            </div>
+
+
+        </div>
+    </form>
+
+
+</body>
+
+<script src="buoi_10.js"></script>
+<script src="btn_tam_giac.js"></script>
+<script src="doc_so.js"></script>
+
+</html>

@@ -130,6 +130,11 @@ function check_register() {
 
 }
 
+function eye() {
+    var mk = document.getElementById("password_signin");
+    mk.type = (mk.type === "password")? "text":"password";
+}  
+
 function check_signin() {
 
     var user_name = document.getElementById('username_signin').value;

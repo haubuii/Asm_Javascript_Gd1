@@ -1,4 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/5fd740bac1abfb826fb7e35ae963efc9?family=ABChanel+Corpo+Regular);
+
 @font-face {
     font-family: "ABChanel Corpo Regular";
     src: url("//db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot");
@@ -261,7 +262,8 @@ select {
     padding: 10px 0;
     margin: 30px 0 10px;
     border: none;
-    border-bottom: 1px solid rgb(129, 129, 129);
+    border-bottom: 1px solid rgb(129, 129, 129, 0.4);
+    transition: 0.2s;
 }
 
 .form-content label {
@@ -284,7 +286,21 @@ select:hover,
 
 input:hover,
 select:hover {
-    border-bottom: 2px solid rgb(34, 34, 34);
+    border-bottom: 1px solid rgb(34, 34, 34);
+}
+
+#password_signin {
+    width: 100%;
+}
+
+i.fas {
+    position: relative;
+    left: 515px;
+    top: -37px;
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+    color: rgb(110, 110, 110);
 }
 
 .phone-number {
@@ -564,17 +580,19 @@ label {
     color: rgb(250, 250, 250);
 }
 
-@media screen and ( max-width: 1706px) {
+@media screen and (max-width: 1706px) {
     .menu {
         font-size: 13px;
     }
+
     .menu-item {
         padding: 0 1vh;
     }
+
     .form-sign-in .forgot-password {
         border-bottom: 1px solid white;
         color: black;
         width: 40%;
-        
+
     }
 }
